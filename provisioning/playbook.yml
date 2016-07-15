@@ -1,0 +1,15 @@
+- name: bootstrap
+  hosts: all
+  user: root
+  tasks:
+    - name: install elasticsearch
+      package: name=elasticsearch cached=yes
+
+    - name: install logstash
+      package: name=logstash cached=yes
+
+    - name: install kibana43
+      package: name=kibana43 cached=yes
+
+    - name: install nginx
+      package: name=nginx cached=yes
